@@ -1,0 +1,13 @@
+.form-group.required .control-label:after { 
+   content:"*";
+   color:red;
+}
+.error{
+	color: #ff0000;
+	font: normal;
+	font-size: 14px;
+}
+.message{
+	color:black;
+	font-size: 24px;
+}
