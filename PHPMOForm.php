@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
 /** PHPMoForm Luncher
 This file to load up all required classes used by the PHPMoForm
@@ -15,6 +16,7 @@ function Elements($class_name) {
 }
 
 */
+define('RestrictedAccess', true); 
 
 include('Models/element.php');
 include('Models/form.php');
