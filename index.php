@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php require_once("PHPMOForm.php");?>
 <html>
 <head>
 <title>PHPMOForm</title>
@@ -11,8 +11,6 @@ This is a working example how to use PHPMoForm library
 Email : mmsa12@gmail.com
 **/
 //include('PHPMOForm.php');
-define('RestrictedAccess', true); 
-require_once("PHPMOForm.php");
 	#create form
 	$testform1=new form();
 	#set form name if not then Form 1 is default name
