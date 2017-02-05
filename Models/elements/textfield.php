@@ -35,6 +35,7 @@ class textfield extends element{
 		{
 			$html.='required';
 		}
+		#add the numbersonly class if marked as true
 		if ($this->getNumbersOnly())
 		{
 			$html.=' numbersonly ';
@@ -48,10 +49,12 @@ class textfield extends element{
 		$html.='/>';
 		return $html;
 	}
+	#set the validation numbersonly
 	function setNumbersOnly($numbersonly)
 	{
 		$this->numbersonly=$numbersonly;
 	}
+	#get the validation numbersonly
 	function getNumbersOnly()
 	{
 		return $this->numbersonly;

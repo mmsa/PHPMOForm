@@ -78,6 +78,7 @@ $(document).ready(function(){
 				errors++;
 				
 			}
+			//check if elements is marked as numbers only and validate the input
 			else if ($("#"+e).hasClass('numbersonly') && validateNumbersOnly($("#"+e).val())===false)
 			{
 				$("#"+e).focus();
@@ -120,6 +121,7 @@ $(document).ready(function(){
 		
 		
 	});
+	//check if string is only numbers
 	function validateNumbersOnly(elementValue)
 	{
 

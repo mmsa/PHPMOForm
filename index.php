@@ -21,6 +21,7 @@ Email : mmsa12@gmail.com
 	$lastname=new textfield('LastName','Last Name');
 	//$lastname->setRequired(true);
 	$phonenumber=new textfield('PhoneNumber','Phone Number');
+	#set numbersonly true
 	$phonenumber->setNumbersOnly(true);
 	$country=new textfield('Country','Country');
 	#textarea example
