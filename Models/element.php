@@ -9,17 +9,11 @@ if(!defined('RestrictedAccess'))
 class element
 {
 	protected $required=false;
-	protected $numbersonly=false;
 	protected $readonly=false;
 	protected $value;
 	protected $elementName;
 	protected $label;
 	protected $type;
-	# set element value
-	function __construct($numbersonly)
-	{
-		$this->numbersonly=$numbersonly;
-	}
 	#set readonly status
 	function setReadOnly($readonly)
 	{
@@ -39,12 +33,6 @@ class element
 	function getIsRequired()
 	{
 		return $this->required;
-	}
-	#check if numbers only
-	function getIsNumberOnly()
-	{
-		return $this->numbersonly;
-		
 	}
 	#check the readonly status
 	function getReadOnly()
