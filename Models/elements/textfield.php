@@ -9,6 +9,7 @@ if(!defined('RestrictedAccess'))
 
 class textfield extends element{
 	protected $type='text';
+	protected $numbersonly=false;
 	/**
 	initialise the name and label values
 	**/
@@ -18,6 +19,7 @@ class textfield extends element{
 		$this->setLabel($label);
 	}
 	
+
 	function output()
 	{
 		$html='<label for="'.$this->getElementName().'" >'.$this->getLabel().'</label>';
@@ -33,6 +35,10 @@ class textfield extends element{
 		{
 			$html.='required';
 		}
+		if ($this->getNumbersOnly())
+		{
+			$html.=' numbersonly ';
+		}
 		$html.='"id="'.$this->getElementName().'" name="'.$this->getElementName().'"  type="text"';
 		#mark readonly if enabled
 		if ($this->getReadOnly())
@@ -41,6 +47,14 @@ class textfield extends element{
 		}
 		$html.='/>';
 		return $html;
+	}
+	function setNumbersOnly($numbersonly)
+	{
+		$this->numbersonly=$numbersonly;
+	}
+	function getNumbersOnly()
+	{
+		return $this->numbersonly;
 	}
 	
 	

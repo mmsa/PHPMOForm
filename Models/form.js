@@ -71,11 +71,18 @@ $(document).ready(function(){
 			//check if the element is marked as required and value is empty
 			if (eValue==='' && $("#"+e).hasClass('required'))
 			{
+				
 				//display error above the element and focus
 				$("#"+e).focus();
 				$("#"+e+"-error").html("This field is required");
 				errors++;
 				
+			}
+			else if ($("#"+e).hasClass('numbersonly') && validateNumbersOnly($("#"+e).val())===false)
+			{
+				$("#"+e).focus();
+				$("#"+e+"-error").html("This field required numbers only");
+				errors++;
 			}
 			else
 			{
@@ -113,4 +120,10 @@ $(document).ready(function(){
 		
 		
 	});
+	function validateNumbersOnly(elementValue)
+	{
+
+		return $.isNumeric(elementValue);
+		
+	}
 });

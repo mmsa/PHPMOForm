@@ -20,6 +20,8 @@ Email : mmsa12@gmail.com
 	$firstname->setRequired(true);
 	$lastname=new textfield('LastName','Last Name');
 	//$lastname->setRequired(true);
+	$phonenumber=new textfield('PhoneNumber','Phone Number');
+	$phonenumber->setNumbersOnly(true);
 	$country=new textfield('Country','Country');
 	#textarea example
 	$address=new textarea('Address','User Address');
@@ -61,6 +63,7 @@ Email : mmsa12@gmail.com
 	#add elements to the form
 	$testform1->addElement($firstname);
 	$testform1->addElement($lastname);
+	$testform1->addElement($phonenumber);
 	$testform1->addElement($address);
 	$testform1->addElement($country);
 	$testform1->addElement($gender);
