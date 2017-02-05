@@ -19,8 +19,13 @@ Add fields to the form
 $firstname=new textfield(fieldName, Field Label);
 Example:
 $firstname=new textfield('FirstName','First Name');
-
+#add validation
 $firstname->setRequired(true);
+
+
+#numbers only validation
+$phonenumber=new textfield('PhoneNumber','Phone Number');
+$phonenumber->setNumbersOnly(true);
 
 #Textarea
 $address=new textarea('Address','User Address');
